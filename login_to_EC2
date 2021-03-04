@@ -1,0 +1,35 @@
+Using username "ubuntu".
+Authenticating with public key "jenkins-master-keypair"
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-1038-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Mar  4 22:31:37 UTC 2021
+
+  System load:  0.07              Processes:             103
+  Usage of /:   16.3% of 7.69GB   Users logged in:       0
+  Memory usage: 22%               IPv4 address for eth0: 172.31.36.21
+  Swap usage:   0%
+
+1 update can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-36-21:~$
