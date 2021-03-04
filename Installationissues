@@ -13,4 +13,54 @@ root@ip-172-31-36-21:/etc/opt#
 
 
 
-SOLTUON: Follow https://pkg.jenkins.io/debian/
+SOLTUON: Followed - https://www.jenkins.io/doc/book/installing/linux/#debianubuntu  to solve the issue !
+
+*********************
+
+root@ip-172-31-36-21:/etc/opt# wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+OK
+root@ip-172-31-36-21:/etc/opt# sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+>     /etc/apt/sources.list.d/jenkins.list'
+root@ip-172-31-36-21:/etc/opt# apt-get update
+Hit:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Ign:4 https://pkg.jenkins.io/debian-stable binary/ InRelease
+Get:5 https://pkg.jenkins.io/debian-stable binary/ Release [2044 B]
+Get:6 https://pkg.jenkins.io/debian-stable binary/ Release.gpg [833 B]
+Hit:7 http://security.ubuntu.com/ubuntu focal-security InRelease
+Get:8 https://pkg.jenkins.io/debian-stable binary/ Packages [19.4 kB]
+Fetched 237 kB in 0s (525 kB/s)
+Reading package lists... Done
+root@ip-172-31-36-21:/etc/opt# apt-get install jenkins
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  daemon net-tools
+The following NEW packages will be installed:
+  daemon jenkins net-tools
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 67.0 MB of archives.
+After this operation, 68.5 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 daemon amd64 0.6.4-1build2 [96.3 kB]
+Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 net-tools amd64 1.60+git20180626.aebd88e-1ubuntu1 [196 kB]
+Get:3 https://pkg.jenkins.io/debian-stable binary/ jenkins 2.263.4 [66.7 MB]
+Fetched 67.0 MB in 4s (15.9 MB/s)
+Selecting previously unselected package daemon.
+(Reading database ... 75840 files and directories currently installed.)
+Preparing to unpack .../daemon_0.6.4-1build2_amd64.deb ...
+Unpacking daemon (0.6.4-1build2) ...
+Selecting previously unselected package net-tools.
+Preparing to unpack .../net-tools_1.60+git20180626.aebd88e-1ubuntu1_amd64.deb ...
+Unpacking net-tools (1.60+git20180626.aebd88e-1ubuntu1) ...
+Selecting previously unselected package jenkins.
+Preparing to unpack .../jenkins_2.263.4_all.deb ...
+Unpacking jenkins (2.263.4) ...
+Setting up net-tools (1.60+git20180626.aebd88e-1ubuntu1) ...
+Setting up daemon (0.6.4-1build2) ...
+Setting up jenkins (2.263.4) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for systemd (245.4-4ubuntu3.4) ...
+root@ip-172-31-36-21:/etc/opt#
