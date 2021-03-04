@@ -1,0 +1,16 @@
+root@ip-172-31-36-21:/etc/opt# apt install -y jenkins
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Package jenkins is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'jenkins' has no installation candidate
+root@ip-172-31-36-21:/etc/opt#
+
+
+
+
+
+SOLTUON: Follow https://pkg.jenkins.io/debian/
